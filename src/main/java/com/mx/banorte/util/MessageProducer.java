@@ -11,7 +11,7 @@ import org.eclipse.microprofile.reactive.messaging.Emitter;
 public class MessageProducer {
 
     @Inject
-    @Channel("dev-topic") // @CHANEL indica el topico donde se enviaran los mensajes
+    @Channel("kafka-topic-test") // @CHANEL indica el topico donde se enviaran los mensajes
     Emitter<String> requestEmitter;
     public void send(String incomingMessage) {
         requestEmitter.send(incomingMessage);
